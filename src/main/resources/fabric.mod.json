@@ -16,7 +16,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"com.example.timestop.TimeStop"
+			"com.example.timestop.TimeStopMod"
 		]
 	},
 	"mixins": [
