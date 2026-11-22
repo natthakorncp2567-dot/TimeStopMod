@@ -44,8 +44,8 @@ public class TimeClockItem extends Item {
             ServerTickRateManager tickManager = server.tickRateManager();
 
             CompoundTag tag = stack.getOrDefault(DataComponents.CUSTOM_DATA, CustomData.EMPTY).copyTag();
-            int currentMode = tag.getInt("TimeMode");
-            boolean isActive = tag.getBoolean("IsActive");
+            int currentMode = tag.getInt("TimeMode").orElse(0);
+            boolean isActive = tag.getBoolean("IsActive").orElse(false);
 
             if (player.isShiftKeyDown()) {
                 resetTime(tickManager, player);
